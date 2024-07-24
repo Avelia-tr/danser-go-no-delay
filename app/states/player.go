@@ -306,7 +306,7 @@ func NewPlayer(beatMap *beatmap.BeatMap) *Player {
 
 	player.trySetupFail()
 
-	preempt := min(1800, beatMap.Diff.Preempt)
+	preempt := 0
 
 	skipTime := 0.0
 	if settings.SKIP {
