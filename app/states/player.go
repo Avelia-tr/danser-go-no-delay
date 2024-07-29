@@ -306,16 +306,16 @@ func NewPlayer(beatMap *beatmap.BeatMap) *Player {
 
 	player.trySetupFail()
 
-	preempt := 0
+	preempt := 0.0
 
 	skipTime := 0.0
 	if settings.SKIP {
 		skipTime = beatMap.HitObjects[0].GetStartTime()
 	}
 
-	skipTime = 0
+	skipTime = 0.0
 
-	beatmapStart := 0
+	beatmapStart := 0.0
 	beatmapEnd := beatMap.HitObjects[len(beatMap.HitObjects)-1].GetEndTime() + float64(beatMap.Diff.Hit50)
 
 	if !math.IsInf(settings.END, 1) {
