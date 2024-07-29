@@ -313,9 +313,9 @@ func NewPlayer(beatMap *beatmap.BeatMap) *Player {
 		skipTime = beatMap.HitObjects[0].GetStartTime()
 	}
 
-	skipTime = max(skipTime, settings.START*1000) - preempt
+	skipTime = 0
 
-	beatmapStart := max(beatMap.HitObjects[0].GetStartTime(), settings.START*1000) - preempt
+	beatmapStart := 0
 	beatmapEnd := beatMap.HitObjects[len(beatMap.HitObjects)-1].GetEndTime() + float64(beatMap.Diff.Hit50)
 
 	if !math.IsInf(settings.END, 1) {
