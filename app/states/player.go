@@ -338,10 +338,10 @@ func NewPlayer(beatMap *beatmap.BeatMap) *Player {
 		}
 
 		player.volumeGlider.SetValue(0.0)
-		player.volumeGlider.AddEvent(skipTime, skipTime+beatMap.Diff.TimeFadeIn, 1.0)
+///		player.volumeGlider.AddEvent(skipTime, skipTime+beatMap.Diff.TimeFadeIn, 1.0)
 
 		player.objectsAlpha.SetValue(0.0)
-		player.objectsAlpha.AddEvent(skipTime, skipTime+beatMap.Diff.TimeFadeIn, 1.0)
+///		player.objectsAlpha.AddEvent(skipTime, skipTime+beatMap.Diff.TimeFadeIn, 1.0)
 
 		if player.overlay != nil {
 			player.overlay.DisableAudioSubmission(true)
